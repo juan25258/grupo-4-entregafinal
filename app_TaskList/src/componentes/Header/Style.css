@@ -1,0 +1,13 @@
+h1 {
+  color: #9b212d;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.botonesnav{
+    display: flex;
+    gap: 1rem;
+}
