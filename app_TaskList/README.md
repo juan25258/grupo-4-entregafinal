@@ -8,6 +8,7 @@ src/
 | ├── TaskForm.jsx
 | ├── TaskItem.jsx
 | ├── TaskList.jsx
+| ├── Footer.jsx
 ├── Utils
 | ├── Tema.jsx
 ├── App.jsx

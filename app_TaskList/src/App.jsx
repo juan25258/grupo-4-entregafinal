@@ -4,6 +4,7 @@ import TaskForm from './components/TaskForm';
 import { Container, CssBaseline, ThemeProvider } from '@mui/material';
 import './App.css';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer'
 import {lightTheme,darkTheme} from './Utils/Tema'
 
 //Fuente
@@ -77,6 +78,7 @@ export default function App() {
         <NavBar toggleTheme={toggleTheme} currentTheme={currentTheme}/>
         <TaskForm addTask={addTask} />
         <TaskList tasks={tasks} handleComplete={handleComplete} handleDelete={handleDelete} handleEditName={handleEditName} />
+        <Footer />
         </ThemeProvider>
     </Container>
 

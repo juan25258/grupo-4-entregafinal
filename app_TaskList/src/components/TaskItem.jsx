@@ -25,7 +25,17 @@ export default function TaskItem  ({ task, handleComplete, handleDelete, handleE
   return (
     <ListItem disablePadding>
       <ListItemButton>
-        <ListItemText primary={task.name} style={{width:'100%',display:'flex',justifyContent:'center', background: isCompleted ? '#41e280' : 'none',}} />
+        <ListItemText
+                    primary={task.name}
+                    style={{
+                              width: '100%',
+                              display: 'flex',
+                              justifyContent: 'center',
+                              background: isCompleted ? '#41e280' : 'none',
+                              overflow: 'hidden',  // Evita que el contenido desborde el contenedor
+                              whiteSpace: 'nowrap',  // Evita el salto de línea dentro del texto
+                           }}
+       />
           {/* Boton Completado */}
           <Checkbox
           color="success"
