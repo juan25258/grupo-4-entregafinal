@@ -1,4 +1,5 @@
 import React from "react";
+import Style from "./Style.css";
 import { Container, CssBaseline, ThemeProvider } from '@mui/material';
 import { useState, useEffect } from 'react';
 import { darkTheme, lightTheme } from "../../componentes/Utils/Tema";
