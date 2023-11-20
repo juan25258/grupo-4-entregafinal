@@ -11,3 +11,10 @@ a {
     display: flex;
     gap: 1rem;
 }
+
+/* @media (max-width:550px){
+  .navbar.bg-dark{
+    min-width: 200vw;
+  } */
+  
+}

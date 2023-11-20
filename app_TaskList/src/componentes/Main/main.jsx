@@ -1,10 +1,12 @@
 import React from "react";
+import "./Style.css"
 
 export default function Main() {
   return (
     <>
       <div class="px-4 my-5 text-center">
-        <img
+        <img 
+          id="logo-home"
           class="d-block mx-auto mb-4"
           src={"src/assets/Logo.svg"}
           alt="Logo"

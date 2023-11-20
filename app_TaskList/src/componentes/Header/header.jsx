@@ -5,7 +5,7 @@ import { Link as LinkHeader } from "react-router-dom";
 export default function Header() {
   return (
     <>
-      <nav className="navbar bg-dark">
+      <nav className="navbar bg-dark MuiContainer-root MuiContainer-maxWidthMd">
         <div className="container">
           <a href="#" className="a-NombreSitio">
             <h1>Easy Task</h1>
