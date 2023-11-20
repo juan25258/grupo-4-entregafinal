@@ -8,7 +8,7 @@ export default function Footer() {
         <footer className="d-flex justify-content-center border-top">
           <div >
             <span className="mb-3 mb-md-0 text-primary">
-              © 2023 Juan Martin Dominguez Company, Inc
+              © 2023 Grupo 4 Company, Inc.
             </span>
           </div>
         </footer>

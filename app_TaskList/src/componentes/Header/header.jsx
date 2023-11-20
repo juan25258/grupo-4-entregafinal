@@ -18,7 +18,7 @@ export default function Header() {
             </button>
 
             <button className="btn btn-Primary" type="button">
-              <LinkHeader id="btn-nav" to="/TaskList">
+              <LinkHeader id="btn-nav" to="/AdminTaskList">
                 TaskList
               </LinkHeader>
             </button>
