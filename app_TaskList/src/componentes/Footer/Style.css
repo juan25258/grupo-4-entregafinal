@@ -1,0 +1,5 @@
+span{
+    display: flex;
+    min-height: 6rem;
+    align-items: center;
+}

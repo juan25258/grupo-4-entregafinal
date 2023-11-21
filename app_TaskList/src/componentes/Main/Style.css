@@ -1,0 +1,11 @@
+@media (max-width:550px){
+    #logo-home{
+        max-width: -webkit-fill-available;
+    }
+}
+
+div.px-4.my-5.text-center{
+    min-height: 82vh;
+}
+
+
