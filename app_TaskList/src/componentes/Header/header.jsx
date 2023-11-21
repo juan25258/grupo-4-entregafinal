@@ -7,7 +7,7 @@ export default function Header() {
     <>
       <nav className="navbar bg-dark MuiContainer-root MuiContainer-maxWidthMd">
         <div className="container">
-          <a href="#" className="a-NombreSitio">
+          <a href="/" className="a-NombreSitio">
             <h1>Easy Task</h1>
           </a>
           <div className="botonesnav">

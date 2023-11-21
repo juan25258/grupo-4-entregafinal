@@ -19,13 +19,14 @@ export default function TaskItem  ({ task, handleComplete, handleDelete, handleE
       handleEditName(task.id, newName);
     }
   };
- //
 
- //
   return (
     <ListItem disablePadding>
       <ListItemButton>
-        <ListItemText primary={task.name} style={{width:'100%',display:'flex',justifyContent:'center', background: isCompleted ? '#41e280' : 'none',}} />
+        <ListItemText
+                    primary={task.name}
+                    sx={{display:'flex', alignContent:'center',justifyContent:'center',height:'30px', width:'100%',background: isCompleted ? '#41e280' : 'none',overflow: 'hidden',}}
+       />
           {/* Boton Completado */}
           <Checkbox
           color="success"
