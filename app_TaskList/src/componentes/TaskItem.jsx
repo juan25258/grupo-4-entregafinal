@@ -32,7 +32,7 @@ export default function TaskItem  ({ task, handleComplete, handleDelete, handleE
           color="success"
           checked={isCompleted}
           onChange={toggleCompleted}
-          disableRipple = 'False'
+          
           />
         
         {/* Boton Editar */}
