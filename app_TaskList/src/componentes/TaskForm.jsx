@@ -1,18 +1,25 @@
 import { useState } from 'react';
-import { Paper, TextField, Button } from '@mui/material';
+import { Paper, TextField, Button, Alert } from '@mui/material';
 
 export default function TaskForm ({ addTask }) {
   const [taskName, setTaskName] = useState('');
+  const [showError, setShowError] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (e) => { //Mensajes de Error o de Agregado correctamente.
     setTaskName(e.target.value);
+    setShowError(false);
+    setShowSuccess(false);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (taskName.trim() !== '') {
       addTask(taskName);
-      setTaskName(''); //Seteo para que se borre el elemento cargado
+      setTaskName('');
+      setShowSuccess(true); // True en Mensaje de tarea agregada correctamente.
+    } else {
+      setShowError(true); // True en Mensaje de campo vacio.
     }
   };
 
@@ -27,12 +34,20 @@ export default function TaskForm ({ addTask }) {
           onChange={handleChange}
           margin="normal"
         />
-        <Button type="submit" variant="contained" color="primary"  style={{marginTop: '8px' }}>
+        {showError && (
+          <Alert severity="error" style={{ marginTop: '8px' }}>
+            El campo no puede estar vacío
+          </Alert>
+        )}
+        {showSuccess && (
+          <Alert severity="success" style={{ marginTop: '8px' }}>
+            Tarea agregada correctamente
+          </Alert>
+        )}
+        <Button type="submit" variant="contained" color="primary" style={{ marginTop: '8px' }}>
           Agregar Tarea
         </Button>
       </form>
     </Paper>
   );
 }
-
-

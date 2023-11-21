@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import { ListItem, ListItemText, ListItemButton, Checkbox, IconButton } from '@mui/material';
+import { ListItem, ListItemText, ListItemButton, IconButton } from '@mui/material';
+import Checkbox from '@mui/material/Checkbox';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 
+
 export default function TaskItem  ({ task, handleComplete, handleDelete, handleEditName }) {
-  
   const [isCompleted, setCompleted] = useState(task.completed);
  
 
@@ -21,6 +22,7 @@ export default function TaskItem  ({ task, handleComplete, handleDelete, handleE
   };
 
   return (
+    
     <ListItem disablePadding>
       <ListItemButton>
         <ListItemText
@@ -28,13 +30,13 @@ export default function TaskItem  ({ task, handleComplete, handleDelete, handleE
                     sx={{display:'flex', alignContent:'center',justifyContent:'center',height:'30px', width:'100%',background: isCompleted ? '#41e280' : 'none',overflow: 'hidden',}}
        />
           {/* Boton Completado */}
+   
           <Checkbox
           color="success"
           checked={isCompleted}
           onChange={toggleCompleted}
-          
           />
-        
+          
         {/* Boton Editar */}
         <IconButton edge="end" aria-label="edit" onClick={handleEditClick}>
           <EditIcon />
@@ -44,6 +46,7 @@ export default function TaskItem  ({ task, handleComplete, handleDelete, handleE
           <DeleteIcon />
         </IconButton>
       </ListItemButton>
+      
     </ListItem>
   );
 }
