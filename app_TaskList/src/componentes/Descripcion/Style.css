@@ -1,7 +1,7 @@
 div#descripcion{
     min-height: 82vh;
     text-align: justify;
-    margin: 4rem;
+    margin: auto;
 }
 h1{
     text-align: center;
