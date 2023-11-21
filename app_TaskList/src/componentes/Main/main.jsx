@@ -1,21 +1,24 @@
 import React from "react";
-import "./Style.css"
+import "./Style.css";
+import { Link as LinkMainHome } from "react-router-dom";
 
 export default function Main() {
   return (
     <>
-      <div class="px-4 my-5 text-center">
-        <img 
+      <div className="px-4 my-5 text-center">
+        <img
           id="logo-home"
-          class="d-block mx-auto mb-4"
+          className="d-block mx-auto mb-4"
           src={"src/assets/Logo.svg"}
           alt="Logo"
           width="500"
           height="250"
         />
-        <h1 class="display-5 fw-bold text-body-emphasis">Algo de titulo(o no...)</h1>
-        <div class="col-lg-6 mx-auto">
-          <p class="">
+        <h1 className="display-5 fw-bold text-body-emphasis">
+          Algo de titulo(o no...)
+        </h1>
+        <div className="col-lg-6 mx-auto">
+          <p>
             ¡Bienvenido a Easy Task, tu compañero perfecto para organizarte de
             manera sencilla y eficiente! En Easy Task, creamos un espacio donde
             la gestión de tus tareas diarias se vuelve, como su nombre indica,
@@ -29,12 +32,12 @@ export default function Main() {
             mejor de todo, ¡puedes acceder a tus listas desde cualquier
             dispositivo en cualquier momento!
           </p>
-          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <button type="button" class="btn btn-primary btn-lg px-4 gap-3">
-              Primary button
+          <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button type="button" className="btn btn-primary btn-lg px-4 gap-3">
+              <LinkMainHome to="/AdminTaskList">Nuestra TaskList</LinkMainHome>
             </button>
-            <button type="button" class="btn btn-outline-secondary btn-lg px-4">
-              Secondary
+            <button type="button" className="btn btn-secondary btn-lg px-4">
+              <LinkMainHome to="/Descripcion">Quienes somos</LinkMainHome>
             </button>
           </div>
         </div>
